@@ -20,7 +20,18 @@ namespace Pokemom_Agenda
         int Vida;
         int Dano;
 
-        // Criação da função de inicialização padrão do meu objeto
+        /// <summary>
+        /// Inicializando as definições de cada uma class e suas atribuições.
+        /// <list type="bullet"> 
+        /// <item> nomePokemon = Definirá o nome do pokemon </item>
+        /// <item> tipoPokemon = O tipo ao qual ele pertence </item>
+        /// <item> nivelPokemon = É o nivel que ele é </item>
+        /// </list>
+        /// </summary>
+        /// <paramvalue> </paramvalue>
+        /// <param name="nomePokemon"> Definirá o nome do pokemon</param>
+        /// <param name="tipoPokemon"> O tipo ao qual ele pertence</param>
+        /// <param name="nivelPokemon"> É o nivel que ele é</param>
         public Pokemon(string nomePokemon, string tipoPokemon, int nivelPokemon)
         {
             //Nome = "Pikachu";
