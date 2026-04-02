@@ -12,9 +12,23 @@ namespace Pokemom_Agenda
 {
     public partial class FmCadastroPokemon : Form
     {
+        BindingList<Pokemon> listaPokemon = new BindingList<Pokemon>();
         public FmCadastroPokemon()
         {
             InitializeComponent();
+        // DataGridView  visualizador e organizador de dados.
+
+         Pokemon p1 = new Pokemon("Pikachu", "Eletrico", 5);
+         Pokemon p2 = new Pokemon("Charmander", "Fogo", 9);
+         Pokemon p3 = new Pokemon("Baulbasaur", "Grama", 15);
+         Pokemon p4 = new Pokemon("Squirtle", "Água", 29);
+
+            listaPokemon.Add(p1);
+            listaPokemon.Add(p2);
+            listaPokemon.Add(p3);
+            listaPokemon.Add(p4);
+
+            dgvListaPokemon.DataSource = listaPokemon;  
         }
         // criação da função (limpar) com retorno nome.
         // disponibilidade retorno nome ( funções) a funão serve 
@@ -42,6 +56,9 @@ namespace Pokemom_Agenda
             int  nivelPokemon = (int) numNivel.Value; // numericUpDown
 
             Pokemon poke = new Pokemon(nomePokemon, tipoPokemon, nivelPokemon);
+
+            listaPokemon.Add(poke);
+
 
             poke.fnDescricao();
 

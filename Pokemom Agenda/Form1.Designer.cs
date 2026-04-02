@@ -40,9 +40,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.dgvListaPokemon = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNivel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPokemon)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -199,11 +201,22 @@
             this.txtNome.Size = new System.Drawing.Size(190, 31);
             this.txtNome.TabIndex = 0;
             // 
+            // dgvListaPokemon
+            // 
+            this.dgvListaPokemon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaPokemon.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dgvListaPokemon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaPokemon.Location = new System.Drawing.Point(328, 99);
+            this.dgvListaPokemon.Name = "dgvListaPokemon";
+            this.dgvListaPokemon.Size = new System.Drawing.Size(726, 200);
+            this.dgvListaPokemon.TabIndex = 3;
+            // 
             // FmCadastroPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1066, 450);
+            this.Controls.Add(this.dgvListaPokemon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -214,6 +227,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNivel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPokemon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,6 +246,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numNivel;
         private System.Windows.Forms.ComboBox cbTipo;
+        private System.Windows.Forms.DataGridView dgvListaPokemon;
     }
 }
 

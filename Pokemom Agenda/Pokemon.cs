@@ -7,18 +7,19 @@ using System.Windows.Forms;
 
 namespace Pokemom_Agenda
 {
-    internal class Pokemon
+   public class Pokemon
     {
         // nome do pokemon
         // tipo do pokemon
         // nivel do pokemon
         // vida do pokemon
         // dano do pokemon
-        string Nome;
-        string Tipo;
-        int Nivel;
-        int Vida;
-        int Dano;
+
+        public string Nome { get; set; }
+        public string Tipo { get; set; }
+        public int Nivel { get; set; }
+        public int Vida { get; set; }
+        public int Dano { get; set; }
 
         /// <summary>
         /// Inicializando as definições de cada uma class e suas atribuições.
@@ -40,8 +41,8 @@ namespace Pokemom_Agenda
             Nome = nomePokemon;
             Tipo = tipoPokemon;
             Nivel = nivelPokemon;
-            Vida = 100;
-            Dano = 20;
+            Vida = nivelPokemon * 70;
+            Dano = nivelPokemon * 10;
         }
         // public posso usar na função em qualquer espaço do meu projeto
         // private posso usar a função somente nio meu arquivo original
