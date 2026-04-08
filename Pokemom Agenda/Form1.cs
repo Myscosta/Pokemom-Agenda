@@ -16,31 +16,31 @@ namespace Pokemom_Agenda
         public FmCadastroPokemon()
         {
             InitializeComponent();
-        // DataGridView  visualizador e organizador de dados.
+            // DataGridView  visualizador e organizador de dados.
 
-         Pokemon p1 = new Pokemon("Pikachu", "Eletrico", 5);
-         Pokemon p2 = new Pokemon("Charmander", "Fogo", 9);
-         Pokemon p3 = new Pokemon("Baulbasaur", "Grama", 15);
-         Pokemon p4 = new Pokemon("Squirtle", "Água", 29);
+            Pokemon p1 = new Pokemon("Pikachu", "Eletrico", 5);
+            Pokemon p2 = new Pokemon("Charmander", "Fogo", 9);
+            Pokemon p3 = new Pokemon("Baulbasaur", "Grama", 15);
+            Pokemon p4 = new Pokemon("Squirtle", "Água", 29);
 
             listaPokemon.Add(p1);
             listaPokemon.Add(p2);
             listaPokemon.Add(p3);
             listaPokemon.Add(p4);
 
-            dgvListaPokemon.DataSource = listaPokemon;  
+            dgvListaPokemon.DataSource = listaPokemon;
         }
         // criação da função (limpar) com retorno nome.
         // disponibilidade retorno nome ( funções) a funão serve 
         // para reaproveitar códigos, definindo uma função eu posso reutilizar o código
-        private void  fnLimpar()
+        private void fnLimpar()
         {
             txtNome.Clear();
             cbTipo.SelectedIndex = 1;
             numNivel.Value = 1;
 
             txtNome.Focus();
-          
+
         }
         /* objetivo da aula: aprnder a criar e utilizar objetos
          * mini game pokemon
@@ -53,7 +53,7 @@ namespace Pokemom_Agenda
         {
             string nomePokemon = txtNome.Text; // textBox
             string tipoPokemon = cbTipo.Text; // comboBox
-            int  nivelPokemon = (int) numNivel.Value; // numericUpDown
+            int nivelPokemon = (int)numNivel.Value; // numericUpDown
 
             Pokemon poke = new Pokemon(nomePokemon, tipoPokemon, nivelPokemon);
 
@@ -71,6 +71,28 @@ namespace Pokemom_Agenda
         {
             fnLimpar();
 
+        }
+
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            //pegar a linha selecionada!
+
+            //                           (ConverteParaTipoVariavel)pegar linha selecionada DGV.
+            Pokemon PokemonSelecionado = (Pokemon)dgvListaPokemon.CurrentRow.DataBoundItem;
+            // char = "a"
+            //string = "texto diverso"
+            //int = 57
+            //double = 32.65
+            //var = subtente sozinha o tipo de variavel, *usar com cuidado.
+
+            //PokemonSelecionado.fnDescricao();
+
+            FormDetalhesPokemon formD = new FormDetalhesPokemon();
+            formD.pokemonRecebido = PokemonSelecionado;
+
+            // ShowDialog = "forço" o usuário a focar em uma unica tela
+            // Show = usuário pode usar qaulquer tela 
+            formD.ShowDialog();
         }
     }
 }

@@ -8,3 +8,4 @@ C:\Users\erica.mfsilva\source\repos\Pokemom Agenda\Pokemom Agenda\obj\Debug\Poke
 C:\Users\erica.mfsilva\source\repos\Pokemom Agenda\Pokemom Agenda\obj\Debug\Pokemom Agenda.csproj.CoreCompileInputs.cache
 C:\Users\erica.mfsilva\source\repos\Pokemom Agenda\Pokemom Agenda\obj\Debug\Pokemom Agenda.exe
 C:\Users\erica.mfsilva\source\repos\Pokemom Agenda\Pokemom Agenda\obj\Debug\Pokemom Agenda.pdb
+C:\Users\erica.mfsilva\source\repos\Pokemom Agenda\Pokemom Agenda\obj\Debug\Pokemom_Agenda.FormDetalhesPokemon.resources

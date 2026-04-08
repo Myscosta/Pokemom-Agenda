@@ -12,9 +12,20 @@ namespace Pokemom_Agenda
 {
     public partial class FormDetalhesPokemon : Form
     {
+        public Pokemon pokemonRecebido { get; set; }
+        
         public FormDetalhesPokemon()
         {
             InitializeComponent();
+
+            lbNome.Text = pokemonRecebido.Nome;
+            lbTipo.Text = pokemonRecebido.Tipo;
+            lbNivel.Text = pokemonRecebido.Nivel.ToString();
+        }
+
+        private void pbImagemPokedex_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
