@@ -17,15 +17,23 @@ namespace Pokemom_Agenda
         public FormDetalhesPokemon()
         {
             InitializeComponent();
-
-            lbNome.Text = pokemonRecebido.Nome;
-            lbTipo.Text = pokemonRecebido.Tipo;
-            lbNivel.Text = pokemonRecebido.Nivel.ToString();
+  
         }
 
         private void pbImagemPokedex_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormDetalhesPokemon_Load(object sender, EventArgs e)
+        {
+            lbNome.Text = pokemonRecebido.Nome;
+            lbTipo.Text = pokemonRecebido.Tipo;
+            lbNivel.Text = pokemonRecebido.Nivel.ToString();
+
+            pbImagemPokedex.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            pbImagemPokedex.Load(pokemonRecebido.fnLinkImg());
         }
     }
 }

@@ -85,6 +85,7 @@
             this.Controls.Add(this.lbNome);
             this.Name = "FormDetalhesPokemon";
             this.Text = "FormDetalhesPokemon";
+            this.Load += new System.EventHandler(this.FormDetalhesPokemon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagemPokedex)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

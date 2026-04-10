@@ -77,6 +77,10 @@ namespace Pokemom_Agenda
         {
             //pegar a linha selecionada!
 
+            // usar o if e else para quando não tiver nada selecionado, "null" Vazio.
+
+            if (dgvListaPokemon.CurrentRow != null) 
+            { 
             //                           (ConverteParaTipoVariavel)pegar linha selecionada DGV.
             Pokemon PokemonSelecionado = (Pokemon)dgvListaPokemon.CurrentRow.DataBoundItem;
             // char = "a"
@@ -93,6 +97,25 @@ namespace Pokemom_Agenda
             // ShowDialog = "forço" o usuário a focar em uma unica tela
             // Show = usuário pode usar qaulquer tela 
             formD.ShowDialog();
+
+            }else
+            {
+                MessageBox.Show("Selecione um Pokemon na lisat");
+            }
+        }
+
+        private void btnTreinar_Click(object sender, EventArgs e)
+        {
+            if (dgvListaPokemon.CurrentRow != null)
+            {
+                Pokemon pokemonParaTreinar = (Pokemon)dgvListaPokemon.CurrentRow.DataBoundItem;
+
+                pokemonParaTreinar.fnTreinar();
+
+                dgvListaPokemon.Refresh();
+
+                MessageBox.Show($"O pokemon  {pokemonParaTreinar.Nome} subiu 1 nivel", " Alerta de treinamento");
+            }
         }
     }
 }

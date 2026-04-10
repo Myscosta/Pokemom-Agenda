@@ -42,6 +42,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dgvListaPokemon = new System.Windows.Forms.DataGridView();
             this.btnVisualizar = new System.Windows.Forms.Button();
+            this.btnTreinar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNivel)).BeginInit();
@@ -223,11 +224,23 @@
             this.btnVisualizar.UseVisualStyleBackColor = true;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
+            // btnTreinar
+            // 
+            this.btnTreinar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTreinar.Location = new System.Drawing.Point(559, 305);
+            this.btnTreinar.Name = "btnTreinar";
+            this.btnTreinar.Size = new System.Drawing.Size(122, 32);
+            this.btnTreinar.TabIndex = 5;
+            this.btnTreinar.Text = "Treinar";
+            this.btnTreinar.UseVisualStyleBackColor = true;
+            this.btnTreinar.Click += new System.EventHandler(this.btnTreinar_Click);
+            // 
             // FmCadastroPokemon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1066, 450);
+            this.Controls.Add(this.btnTreinar);
             this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.dgvListaPokemon);
             this.Controls.Add(this.groupBox1);
@@ -261,6 +274,7 @@
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.DataGridView dgvListaPokemon;
         private System.Windows.Forms.Button btnVisualizar;
+        private System.Windows.Forms.Button btnTreinar;
     }
 }
 

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Pokemom_Agenda
 {
-   public class Pokemon
+    public class Pokemon
     {
         // nome do pokemon
         // tipo do pokemon
@@ -51,5 +51,22 @@ namespace Pokemom_Agenda
             MessageBox.Show($"pokemon: {Nome}, Tipo: {Tipo}," +
                 $"Nivel: {Nivel}, Vida: {Vida}, Dano: {Dano}");
         }
-}
+
+        public string fnLinkImg()
+        {
+            string nomeTratado = Nome.Replace(" ", "-").Replace(".", "").ToLower();
+
+            return $"https://img.pokemondb.net/artwork/{nomeTratado}.jpg";
+        }
+
+        public void fnTreinar()
+        {
+            Nivel++;
+
+            Vida = Nivel * 70;
+            Dano = Nivel * 15;
+        }
+
     }
+
+ }
